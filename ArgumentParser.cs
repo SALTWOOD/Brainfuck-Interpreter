@@ -26,7 +26,7 @@ namespace Brainfuck
             foreach (string i in args)
             {
                 string current = RegexMatch(i, "[^-].*");
-                bool isArgHead = (current == i ? true : false);
+                bool isArgHead = !(current == i);
                 switch (argHead)
                 {
                     case "":

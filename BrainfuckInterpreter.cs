@@ -51,6 +51,7 @@ namespace Brainfuck
                 using (StreamReader sr = new StreamReader(argp.filename))
                 {
                     string command = sr.ReadToEnd();
+                    Execute(command);
                 }
             }
         }

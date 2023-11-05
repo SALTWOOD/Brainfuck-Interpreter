@@ -10,7 +10,7 @@ namespace Brainfuck
     {
         byte[] bytes;
         int pointer = 0;
-        public readonly Version version = new Version(0, 0, 1, 5);
+        public readonly Version version = new Version(0, 0, 2, 0);
 
         public BrainfuckInterpreter()
         {
@@ -30,10 +30,13 @@ namespace Brainfuck
                     {
                         Console.Write("\r>>> ");
                         string? command = Console.ReadLine();
-                        if (command != "" && command != null)
+                        if (command != null)
                         {
-                            Execute(command);
-                            Console.WriteLine();
+                            if (command != "")
+                            {
+                                Execute(command);
+                                Console.WriteLine();
+                            }
                         }
                         else
                         {
